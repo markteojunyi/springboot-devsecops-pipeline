@@ -28,7 +28,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          Build-and-test Status: ${{ needs.build-and-test.result }}
+          Build-and-test Status: ${{ job.status }}
 
   snyk-scanning:
     needs: build-and-test
